@@ -20,7 +20,8 @@ class ContactController extends Controller
         $data = $request->validate([
             'subject'=> ['required', 'string'],
             'email'=>['required', 'email'],
-            'message'=>['required', 'string']
+            'message'=>['required', 'string'],
+            'name'=>['required', 'string']
         ]);
         return Contact::create($data);
     }
